@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color:white;
+  transition: all .4s ease;
+}
+
+/* Navbar Menu Links */
+.nav-menu-links ul li {
+  list-style: none;
+}
+
+.nav-menu-links ul li a {
+  text-decoration: none;
+  color: rgb(9, 26, 35);
+  font-family: "Josefin Sans", sans-serif;
+  transition: 0.4s ease;
+}
+
+.nav-menu-links ul li a:hover {
+  color: rgb(255, 86, 0);
+}
+
+/* Nav Button Custom Custom Class */
+.btn-order {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgb(255, 86, 0); 
+  padding: 15px 35px;
+  border-radius: 5px;
+  color: rgb(70, 77, 101);
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btn-order::before {
+  position: absolute;
+  content: "";
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(255, 86, 0); 
+  transition: 0.4s ease; 
+}
+
+.btn-order:hover::before {
+  top: 0;
+}
+
+.btn-order:hover {
+  color: white;
+} 
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./image/h1_hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* FIX: Yeh padding text ko navbar ke niche dhakele gi */
+  padding-top: 300px; 
+  padding-bottom: 250px;
+}
+
+.hero-section-text {
+  max-width: 950px;
+  animation: slideLeft 1.2s ease;
+}
+
+.hero-section-text span {
+  color: rgb(255, 86, 0);
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.hero-section-text h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 20px 0 35px 0;
+  font-family: "Josefin Sans", sans-serif;
+
+}
+
+.hero-section-text p {
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.btn-reservation {
+  background-color: rgb(255, 86, 0);
+  color: white;
+  border: none;
+  padding: 19px 50px;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn-reservation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(230, 81, 7); 
+  transition: .4s;
+  z-index: -1;
+}
+
+.btn-reservation:hover::before {
+  left: 0;
+}
+
+/* Keyframes */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* about section */
+.about-section{
+padding: 200px 0px;
+}
+.about-subtitle{
+  color: rgb(255, 86, 0);
+  font-weight: 500;
+}
+.about-content h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+
+}
+.about-content .about-info{
+  margin-bottom: 30px;
+}
+.about-item{
+  font-size: 14px;
+ 
+}
+
+
+/* menu section */
+
+
+.menu-section {
+    background-color: #F7F9F8;
+    padding-top: 90px;
+    padding-bottom: 0; 
+    text-align: center;
+    overflow-x: hidden; 
+}
+
+.menu h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    max-width: 650px;
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 18px; 
+   
+    transition: 0.4s ease; 
+}
+
+.menu ul li:hover {
+    background-color: rgb(255, 86, 0);
+    color: white;
+}
+
+.menu-img {
+    width: 100%;
+    height:auto; 
+  display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: .4s ease;
+    object-fit: cover;
+}
+.gallery-small{
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+.gallery-big{
+    height: 600px;
+}
+.food-card{
+  position: relative;
+  overflow: hidden;
+}
+.food-overlay{
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    transition:.4s ease;
+}
+.food-card:hover .food-overlay{
+    opacity:1;
+}
+
+
+.menu-img .food-card:hover {
+  transform:scale(1.05);
+    filter:brightness(50%);}
+    .food-overlay span{
+    color:#ff5600;
+    font-size:30px;
+    font-weight:700;
+}
+
+.food-overlay h4{
+    color:white;
+    margin:15px 0;
+}
+
+.food-overlay button{
+    background:#ff5600;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius: 5px;
+      position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.food-overlay button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(230, 81, 7); 
+  transition: .4s;
+  z-index: -1;
+}
+
+.food-overlay button:hover::before {
+  left: 0;
+}
+
+
+
+/* about section -3 */
+
+.about-section3{
+    display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./image/section_bg03.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 150px; 
+  padding-bottom: 150px;
+  margin-bottom: 150px;
+}
+.about-section-text {
+  max-width: 500px;
+  margin-left:  auto;
+  animation: slideLeft 1.2s ease;
+  text-align: left;
+
+  
+  
+}
+
+.about-section-text span {
+  color: rgb(255, 86, 0);
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 10px;
+ 
+ 
+}
+
+.about-section-text h1 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 20px 0 35px 0;
+  /* text-align: right; */
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 500px;
+ 
+
+}
+.about-section-text input{
+outline: none;
+background: white;
+color: black;
+padding: 15px 30px;
+border: none;
+margin: 0;
+width: 100%;
+font-size: 18px;
+font-family: "Josefin Sans", sans-serif;
+
+}
+.about-section-text button{
+  padding: 15px 30px ;
+  background-color: rgb(255, 86, 0);
+  color: white;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.about-section-text p {
+  font-size: 18px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  /* text-align: right; */
+}
+.about-section-text span,
+.about-section-text h1,
+.about-section-text p,
+.about-section-text form{
+  width: 100%;
+}
+.about-section-text form{
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+/* services section */
+.service-section {
+    background-color: #fff; 
+    padding-bottom: 150px;
+}
+
+.service-section h1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    max-width: 500px;
+}
+
+
+
+
+.service-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    
+}
+/* footer */
+footer {
+    background-image: url("./image/footer-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 120px; 
+    padding-bottom: 40px; 
+    font-family: "Josefin Sans", sans-serif;
+ 
+}
+.footer-top{
+margin-bottom: 120px;
+}
+
+.footer-content h6 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-content ul li {
+    list-style: none;
+    margin-bottom: 12px; 
+}
+
+.footer-content ul li a {
+    color: #bbbbbb; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+    color: rgb(255, 86, 0); 
+    padding-left: 5px; 
+}
+
+/* --- Instagram Feed --- */
+.insta-feed-grid img {
+    width: calc(33.33% - 6px); 
+    height: 80px; 
+    object-fit: cover; 
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.insta-feed-grid img:hover {
+    transform: scale(1.05); 
+    opacity: 0.8;
+}
+
+/* --- Footer Bottom  --- */
+
+.footer-bottom{
+  padding-top: 100px;
+}
+
+.footer-copy {
+    color: #bbbbbb; 
+    font-size: 16px;
+}
+
+.soical-media {
+    display: flex;
+    gap: 30px; 
+}
+
+.social-links a {
+    color: #bbbbbb;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgb(255, 86, 0); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Media Queries  --- */
+
+@media (max-width: 992px) {
+.nav-menu-links.collapse.show {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    
+    /* Magic Fix: Is se menu logo ke neeche line break nahi karega, balki ek alag layer par khulega */
+    position: absolute;
+    top: 100%; /* Header ke bilkul niche se shuru hoga */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+
+  .nav-menu-links ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    width: 100%;
+  }
+
+  .nav-menu-links .btn-order {
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  .hero-section {
+    padding-top: 90px; /* Mobile/Tablet ke liye adjustment */
+  }
+  .hero-section-text h1 {
+    font-size: 55px;
+  }
+  .hero-section-text p {
+    max-width: 500px;
+  }
+  .about-content h1{
+    
+    font-size: 40px;
+
+}
+.about-content{
+margin-top: 50px;
+}
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+  
+    padding-top: 200px;
+  }
+  .hero-section-text h1 {
+    font-size: 45px;
+  }
+  .about-section{
+padding: 100px 0px;
+}
+.about-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+.about-content .about-info{
+  font-size: 20px;
+}
+
+
+
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+  
+    padding-top: 250px;
+  }
+  .hero-section-text {
+    margin: 0 auto;
+  }
+  .hero-section-text h1 {
+    font-size: 35px;
+  }
+  .hero-section-text p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  .about-section{
+padding: 100px 0px;
+margin: 0;
+}
+.about-content h1{
+  font-size: 50px;
+}
+.about-content p{
+  font-size: 18px;
+  line-height: 1.3;
+ 
+}
+
+}
