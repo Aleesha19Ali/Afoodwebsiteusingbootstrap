@@ -8,6 +8,8 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Header */
@@ -20,7 +22,12 @@ header {
   background-color:white;
   transition: all .4s ease;
 }
-
+.logo-img img{
+  width: auto;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 /* Navbar Menu Links */
 .nav-menu-links ul li {
   list-style: none;
@@ -28,21 +35,21 @@ header {
 
 .nav-menu-links ul li a {
   text-decoration: none;
-  color: rgb(9, 26, 35);
+  color: #292524;
   font-family: "Josefin Sans", sans-serif;
   transition: 0.4s ease;
 }
 
 .nav-menu-links ul li a:hover {
-  color: rgb(255, 86, 0);
+    color:#FBBF24;
 }
 
-/* Nav Button Custom Custom Class */
+/* Nav Button  */
 .btn-order {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid rgb(255, 86, 0); 
+  border: 1px solid #FBBF24; 
   padding: 15px 35px;
   border-radius: 5px;
   color: rgb(70, 77, 101);
@@ -61,7 +68,7 @@ header {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: rgb(255, 86, 0); 
+  background-color: #FBBF24; 
   transition: 0.4s ease; 
 }
 
@@ -74,102 +81,34 @@ header {
 } 
 
 /* Hero Section */
-
-.hero-section {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url('./image/h1_hero.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* FIX: Yeh padding text ko navbar ke niche dhakele gi */
-  padding-top: 300px; 
-  padding-bottom: 250px;
-}
-
-.hero-section-text {
-  max-width: 950px;
-  animation: slideLeft 1.2s ease;
-}
-
-.hero-section-text span {
-  color: rgb(255, 86, 0);
-  font-size: 22px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.hero-section-text h1 {
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 20px 0 35px 0;
-  font-family: "Josefin Sans", sans-serif;
-
-}
-
-.hero-section-text p {
-  font-size: 18px;
-  max-width: 600px;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-.btn-reservation {
-  background-color: rgb(255, 86, 0);
-  color: white;
-  border: none;
-  padding: 19px 50px;
-  font-size: 20px;
-  font-family: "Josefin Sans", sans-serif;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.btn-reservation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
+.hero-section{
+  padding-top: 90px;
   width: 100%;
-  height: 100%;
-  background-color: rgb(230, 81, 7); 
-  transition: .4s;
-  z-index: -1;
+}
+.hero-img img{
+ width: 100%;
+  height: auto;
+  min-height: 550px;
+  display: block;
+  object-fit: cover;
+  object-position:center;
 }
 
-.btn-reservation:hover::before {
-  left: 0;
-}
-
-/* Keyframes */
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 /* about section */
 .about-section{
 padding: 200px 0px;
+background-color: #ffff;
+
 }
 .about-subtitle{
-  color: rgb(255, 86, 0);
+  color: #FBBF24;
   font-weight: 500;
 }
 .about-content h1{
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-    font-size: 48px;
+    font-weight: 500;
+    font-size:30 !important;
 
 }
 .about-content .about-info{
@@ -181,11 +120,12 @@ padding: 200px 0px;
 }
 
 
+
 /* menu section */
 
 
 .menu-section {
-    background-color: #F7F9F8;
+    background-color:   #FFF8E7;
     padding-top: 90px;
     padding-bottom: 0; 
     text-align: center;
@@ -194,8 +134,8 @@ padding: 200px 0px;
 
 .menu h1 {
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-    font-size: 50px;
+    font-weight: 500;
+    font-size: 48px;
     max-width: 650px;
 }
 
@@ -204,12 +144,12 @@ padding: 200px 0px;
     font-size: 18px;
     cursor: pointer;
     padding: 6px 18px; 
-   
+  
     transition: 0.4s ease; 
 }
 
 .menu ul li:hover {
-    background-color: rgb(255, 86, 0);
+    background-color: #FBBF24;
     color: white;
 }
 
@@ -220,7 +160,7 @@ padding: 200px 0px;
     padding: 0 !important;
     margin: 0 !important;
     transition: .4s ease;
-    object-fit: cover;
+    object-fit:cover;
 }
 .gallery-small{
     height: 300px;
@@ -238,7 +178,7 @@ padding: 200px 0px;
     position: absolute;
     inset: 0;
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.65);
 
     display:flex;
     flex-direction:column;
@@ -257,7 +197,7 @@ padding: 200px 0px;
   transform:scale(1.05);
     filter:brightness(50%);}
     .food-overlay span{
-    color:#ff5600;
+    color:#FBBF24;
     font-size:30px;
     font-weight:700;
 }
@@ -268,7 +208,7 @@ padding: 200px 0px;
 }
 
 .food-overlay button{
-    background:#ff5600;
+    background:#FBBF24;
     color:white;
     border:none;
     padding:10px 20px;
@@ -284,7 +224,7 @@ padding: 200px 0px;
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgb(230, 81, 7); 
+  background-color: #c79a29; 
   transition: .4s;
   z-index: -1;
 }
@@ -295,100 +235,22 @@ padding: 200px 0px;
 
 
 
-/* about section -3 */
 
-.about-section3{
-    display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url('./image/section_bg03.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 150px; 
-  padding-bottom: 150px;
-  margin-bottom: 150px;
-}
-.about-section-text {
-  max-width: 500px;
-  margin-left:  auto;
-  animation: slideLeft 1.2s ease;
-  text-align: left;
 
-  
-  
-}
 
-.about-section-text span {
-  color: rgb(255, 86, 0);
-  font-size: 22px;
-  display: inline-block;
-  margin-bottom: 10px;
- 
- 
-}
 
-.about-section-text h1 {
-  font-size: 50px;
-  font-weight: 500;
-  line-height: 1.1;
-  margin: 20px 0 35px 0;
-  /* text-align: right; */
-  font-family: "Josefin Sans", sans-serif;
-  max-width: 500px;
- 
-
-}
-.about-section-text input{
-outline: none;
-background: white;
-color: black;
-padding: 15px 30px;
-border: none;
-margin: 0;
-width: 100%;
-font-size: 18px;
-font-family: "Josefin Sans", sans-serif;
-
-}
-.about-section-text button{
-  padding: 15px 30px ;
-  background-color: rgb(255, 86, 0);
-  color: white;
-  border: none;
-  margin: 0;
-  cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.about-section-text p {
-  font-size: 18px;
-  max-width: 500px;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  /* text-align: right; */
-}
-.about-section-text span,
-.about-section-text h1,
-.about-section-text p,
-.about-section-text form{
-  width: 100%;
-}
-.about-section-text form{
-  display: flex;
-  width: 100%;
-}
 
 
 
 
 /* services section */
 .service-section {
-    background-color: #fff; 
-    padding-bottom: 150px;
+       background-color:   white; 
+    padding: 150px 0;
+    
 }
 
-.service-section h1 {
+.service-section h1  {
     font-size: 50px;
     font-weight: 500;
     line-height: 1.1;
@@ -397,102 +259,54 @@ font-family: "Josefin Sans", sans-serif;
     max-width: 500px;
 }
 
-
-
-
 .service-card:hover {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    background-color: white !important;
     
 }
+
+/* review section */
+.review-section{
+  background-color:#FFF8E7 ;
+  padding: 150px 0;
+
+}
+.review-card{
+      background:#FFF8E7;
+    border-radius:15px;
+    overflow:hidden;
+   padding: 10px;
+}
+.review-img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color:#FBBF24;
+    border-radius:50%;
+    padding:20px;
+}
+
+
 /* footer */
-footer {
-    background-image: url("./image/footer-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 120px; 
-    padding-bottom: 40px; 
-    font-family: "Josefin Sans", sans-serif;
- 
-}
-.footer-top{
-margin-bottom: 120px;
+.simple-footer{
+    background-color:#FFF8E7;
+    border-top:1px solid #FBBF24;
+    padding:25px 0;
 }
 
-.footer-content h6 {
-    color: #ffffff;
-    margin-bottom: 30px;
-    font-size: 20px;
-    font-weight: 600;
+.simple-footer p{
+    margin:0;
+    color:#444;
 }
 
-.footer-content ul li {
-    list-style: none;
-    margin-bottom: 12px; 
+.simple-footer span{
+    color:#FBBF24;
+    font-weight:600;
 }
-
-.footer-content ul li a {
-    color: #bbbbbb; 
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-.footer-content ul li a:hover {
-    color: rgb(255, 86, 0); 
-    padding-left: 5px; 
-}
-
-/* --- Instagram Feed --- */
-.insta-feed-grid img {
-    width: calc(33.33% - 6px); 
-    height: 80px; 
-    object-fit: cover; 
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.insta-feed-grid img:hover {
-    transform: scale(1.05); 
-    opacity: 0.8;
-}
-
-/* --- Footer Bottom  --- */
-
-.footer-bottom{
-  padding-top: 100px;
-}
-
-.footer-copy {
-    color: #bbbbbb; 
-    font-size: 16px;
-}
-
-.soical-media {
-    display: flex;
-    gap: 30px; 
-}
-
-.social-links a {
-    color: #bbbbbb;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-.social-links a:hover {
-    color: rgb(255, 86, 0); 
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -504,10 +318,9 @@ margin-bottom: 120px;
     flex-direction: column;
     align-items: flex-start !important;
     gap: 20px !important;
-    
-    /* Magic Fix: Is se menu logo ke neeche line break nahi karega, balki ek alag layer par khulega */
+  
     position: absolute;
-    top: 100%; /* Header ke bilkul niche se shuru hoga */
+    top: 100%; 
     left: 0;
     width: 100%;
     background-color: white;
@@ -517,7 +330,7 @@ margin-bottom: 120px;
   }
 
   .nav-menu-links ul {
-    flex-direction: column !important;
+    
     align-items: flex-start !important;
     gap: 15px !important;
     width: 100%;
@@ -529,19 +342,16 @@ margin-bottom: 120px;
   }
 
   
-  .hero-section {
-    padding-top: 90px; /* Mobile/Tablet ke liye adjustment */
+ .hero-img img {
+    min-height: 450px; 
+    object-position: 65% center; 
   }
-  .hero-section-text h1 {
-    font-size: 55px;
-  }
-  .hero-section-text p {
-    max-width: 500px;
-  }
+  .about-section{
+padding: 150px 0px;
+}
+ 
   .about-content h1{
-    
-    font-size: 40px;
-
+    font-size: 25px;
 }
 .about-content{
 margin-top: 50px;
@@ -550,54 +360,55 @@ margin-top: 50px;
 
 
 @media (max-width: 768px) {
-    .hero-section {
-  
-    padding-top: 200px;
-  }
-  .hero-section-text h1 {
-    font-size: 45px;
+   .hero-img img {
+    min-height: 380px; 
+    object-position: 70% center; 
   }
   .about-section{
-padding: 100px 0px;
+padding: 150px 0px;
 }
 .about-content h1 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
 }
 .about-content .about-info{
-  font-size: 20px;
+  font-size: 18px;
 }
+ .footer-heading {
+    margin-bottom: 18px;
+  }
+  .insta-feed-grid img {
+    height: 90px; /* Better preview ratio for mobile viewports */
+  }
 
 
 
 }
 
 @media (max-width: 576px) {
-  .hero-section {
-  
-    padding-top: 250px;
+ .hero-img img {
+    min-height: 280px; 
+    object-position: 73% center; 
   }
-  .hero-section-text {
-    margin: 0 auto;
-  }
-  .hero-section-text h1 {
-    font-size: 35px;
-  }
-  .hero-section-text p {
-    font-size: 16px;
-    max-width: 400px;
-  }
+ 
+ 
   .about-section{
-padding: 100px 0px;
+padding: 120px 0px;
 margin: 0;
 }
+.about-content{
+  margin: 0;
+}
 .about-content h1{
-  font-size: 50px;
+  font-size: 28px;
+}
+.about-content .about-info{
+  font-size: 14px;
+    line-height: 1.5;
+
 }
 .about-content p{
-  font-size: 18px;
-  line-height: 1.3;
- 
+  font-size: 12px;
 }
 
 }
