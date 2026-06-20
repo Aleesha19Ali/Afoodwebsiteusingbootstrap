@@ -101,6 +101,11 @@ padding: 200px 0px;
 background-color: #ffff;
 
 }
+.about-img img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
 .about-subtitle{
   color: #FBBF24;
   font-weight: 500;
@@ -233,6 +238,28 @@ background-color: #ffff;
   left: 0;
 }
 
+/* contact us */
+.contact{
+  width: 100%;
+  height: 100%;
+  display: flex ;
+  align-items: center;
+  gap: 20px;
+  padding-top: 200px;
+  padding-bottom: 300px;
+}
+form h1{
+  font-family: "Josefin Sans", sans-serif;
+}
+form input ,textarea ,button{
+  padding: 10px 20px;
+  border-radius: 10px;
+
+ 
+}
+form input{
+  width: 45%;
+}
 
 
 
@@ -256,7 +283,7 @@ background-color: #ffff;
     line-height: 1.1;
     margin-bottom: 50px;
     font-family: "Josefin Sans", sans-serif;
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 .service-card:hover {
@@ -307,6 +334,13 @@ background-color: #ffff;
     color:#FBBF24;
     font-weight:600;
 }
+
+/* choose-section */
+.choose-section{
+  background-color: #FFF8E7;
+  padding: 150px 0;
+}
+
 
 
 
@@ -367,6 +401,11 @@ margin-top: 50px;
   .about-section{
 padding: 150px 0px;
 }
+.about-img img{
+ 
+  height: 350px;
+
+}
 .about-content h1 {
     font-size: 30px;
     font-weight: 600;
@@ -395,6 +434,11 @@ padding: 150px 0px;
   .about-section{
 padding: 120px 0px;
 margin: 0;
+}
+.about-img img{
+
+  height: 280px;
+ 
 }
 .about-content{
   margin: 0;
